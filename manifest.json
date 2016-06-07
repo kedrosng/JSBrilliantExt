@@ -1,0 +1,25 @@
+{
+    "name": "PlanDownloaderv6.0",
+    "description": "Automatically Download and Close Tab",
+    "version": "6.0",
+    "permissions": [
+        "tabs",
+        "<all_urls>"
+    ],
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://bravo.bd.gov.hk/*",
+                "https://bravo.bd.gov.hk/*"
+            ],
+            "js": [
+                "plan.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "manifest_version": 2
+}
