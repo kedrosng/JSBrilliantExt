@@ -1,7 +1,7 @@
 {
-    "name": "PlanDownloaderv6.2",
+    "name": "PlanDownloaderv6.3",
     "description": "Automatically Download and Close Tab",
-    "version": "6.2",
+    "version": "6.3",
     "permissions": [
         "tabs",
         "<all_urls>"
