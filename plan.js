@@ -18,8 +18,17 @@ var PlanDownloader = (function() {
 						{var a = prompt("Start From Which Page","Please input a number");
 						 var b = prompt("Finish in Which Page","Please input a number");
 						for(a > 0; parseInt(a)  <= parseInt(b); a++)
-						{window.open('https://bravo.bd.gov.hk/getInspectionDocumentImage?imageId='+theSnippedURL+'&pageNo='+a);
-						setTimeout(window.close(),5000);}
+						{//window.open('https://bravo.bd.gov.hk/getInspectionDocumentImage?imageId='+theSnippedURL+'&pageNo='+a);
+						   var uri = 'https://bravo.bd.gov.hk/getInspectionDocumentImage?imageId='+theSnippedURL+'&pageNo='+a;
+						   var link = document.createElement('a');
+						   document.body.appendChild(link); 
+               link.href = uri;
+               link.download = 'page'+a+'.tif';
+               link.click();
+               setTimeout((),5000);
+               
+						//setTimeout(window.close(),5000);
+						}
 						confirm("Download Reports Completed, Please Wait Until All Tab CLosed.");
 	      }}
 	      else
